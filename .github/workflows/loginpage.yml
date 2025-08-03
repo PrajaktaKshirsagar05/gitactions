@@ -31,5 +31,5 @@ jobs:
         working-directory: UI_Automation_git_actions
 
       - name: Run Playwright tests on Chrome
-        run: npx playwright test tests/login.test.ts --project=chromium --config=playwright.config.ts
+        run: npx playwright test tests/example.spec.ts --project=chromium --config=playwright.config.ts
         working-directory: UI_Automation_git_actions
