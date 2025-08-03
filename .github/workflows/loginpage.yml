@@ -20,12 +20,16 @@ jobs:
 
       - name: Install dependencies
         run: npm install
+        working-directory: UI_Automation_git_actions
 
       - name: Install playwright-test
         run: npm install --save-dev @playwright/test
+        working-directory: UI_Automation_git_actions
 
       - name: Install only Chrome for Playwright
         run: npx playwright install chromium
+        working-directory: UI_Automation_git_actions
 
       - name: Run Playwright tests on Chrome
         run: npx playwright test tests/login.test.ts --project=chromium --config=playwright.config.ts
+        working-directory: UI_Automation_git_actions
